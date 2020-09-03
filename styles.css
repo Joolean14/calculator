@@ -1,0 +1,39 @@
+body {
+    font-family: 'VT323', monospace;
+    background-color: black;
+    color: white;
+}
+h1 {
+    font-size: 60px;
+}
+
+#app {
+    text-align: center;
+}
+
+button {
+    border-style: solid;
+    border-color: white;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: 'VT323', monospace;
+    font-weight: 600;
+    margin: 5px;
+    padding: 10px;
+}
+
+#clear, #equals {
+    background-color: white;
+    color: black;
+}
+
+input[type=text] {
+    border: none;
+    background-color: black;
+    color: white;
+    border-bottom: 2px solid white;
+  }
+
+  
