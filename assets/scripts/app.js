@@ -53,7 +53,7 @@ function clearCalc () {
 }
 
 function calculate () {
-    return eval(currentCalculationOutput.innerText);
+    currentResultOutput.textContent = eval(currentCalculationOutput.innerText);
 }
 
 sumBtn.addEventListener('click', readNumber);
