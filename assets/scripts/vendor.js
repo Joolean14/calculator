@@ -14,8 +14,6 @@ const num7 = document.getElementById('7');
 const num8 = document.getElementById('8');
 const num9 = document.getElementById('9');
 
-// const defaultResult = 0;
-// let currentResult = defaultResult;
 
 const currentResultOutput = document.getElementById('current-result');
 const currentCalculationOutput = document.getElementById('current-calculation');
@@ -23,4 +21,4 @@ const currentCalculationOutput = document.getElementById('current-calculation');
 function outputResult(result, text) {
     currentResultOutput.textContent = result;
     currentCalculationOutput.textContent = text;
-  }
+}

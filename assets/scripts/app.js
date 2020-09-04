@@ -3,8 +3,14 @@ let currentResult = defaultResult;
 let logEntries = [];
 
 // Gets input from input field
-function getUserNumberInput() {
-  return parseInt(usrInput.value);
+// function getUserNumberInput() {
+//     currentCalculationOutput.innerText = "+";
+//   return parseInt(usrInput.value);
+// }
+
+function readNumber(event){
+    console.log(event)
+    currentCalculationOutput.innerText = currentCalculationOutput.innerText + event.target.innerText;
 }
 
 // Generates and writes calculation log
@@ -19,6 +25,7 @@ function add() {
   currentResult += enteredNumber;
   createAndWriteOutput('+', initialResult, enteredNumber);
 }
+
 
 function subtract() {
   const enteredNumber = getUserNumberInput();
@@ -41,8 +48,27 @@ function divide() {
   createAndWriteOutput('/', initialResult, enteredNumber);
 }
 
+function clearCalc () {
+    currentCalculationOutput.innerText = "0";
+}
 
-sumBtn.addEventListener('click', add);
-subtractBtn.addEventListener('click', subtract);
-multiplyBtn.addEventListener('click', multiply);
-divideBtn.addEventListener('click', divide);
+function calculate () {
+    return eval(currentCalculationOutput.innerText);
+}
+
+sumBtn.addEventListener('click', readNumber);
+subtractBtn.addEventListener('click', readNumber);
+multiplyBtn.addEventListener('click', readNumber);
+divideBtn.addEventListener('click', readNumber);
+clearBtn.addEventListener('click', clearCalc);
+equalsBtn.addEventListener('click', calculate);
+
+
+for (let i = 0; i < 10; i++) {
+    document.getElementById(i.toString()).addEventListener('click', readNumber);
+}
+
+
+    
+    
+    
