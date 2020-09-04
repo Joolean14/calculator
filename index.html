@@ -4,14 +4,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/styles/styles.css">
+    <script src="assets/scripts/vendor.js" defer></script>
+    <script src="assets/scripts/app.js" defer></script>
 </head>
 <body>
     <section id="app">
         <h1>Calculator</h1>
         <form>
             <div>
-                <input id="screen" type="text">
+                <!-- <input id="screen" type="text"> -->
+                <div id="results">
+                    <h2 id="current-calculation">0</h2>
+                    <h2>R<span id="current-result">0</span></h2>
+                </div>
             </div>
             <div>
                 <div>
@@ -41,6 +47,5 @@
             </div>
         </form>
     </section>
-    <script src="app.js"></script>
 </body>
 </html>
