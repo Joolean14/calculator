@@ -3,7 +3,11 @@ let currentResult = defaultResult;
 
 
 function readNumber(event){
-    currentCalculationOutput.innerText = currentCalculationOutput.innerText + event.target.innerText;
+    if (currentCalculationOutput.innerText === "0") {
+      currentCalculationOutput.innerText = event.target.innerText;
+    } else {
+      currentCalculationOutput.innerText = currentCalculationOutput.innerText + event.target.innerText;
+    }
 }
 
 // Generates and writes calculation log
